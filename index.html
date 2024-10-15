@@ -23,7 +23,7 @@ Je vous remercie d'avance pour votre attention et votre soutien.
 
 Cordialement,`;
             const value = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(text)}`;
-            
+
             document.getElementById("link").setAttribute("href", value);
         }
     </script>
@@ -32,7 +32,7 @@ Cordialement,`;
 <body class="flex items-center dark bg-black justify-center h-screen w-screen">
     <form class="max-w-96 min-w-80 bg-center" >
         <form class="max-w-sm mx-auto">
-            <label for="salle" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Salle a
+            <label for="salle" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Salle à
                 réserver</label>
             <select id="salle"
             onchange="dostuff()"
