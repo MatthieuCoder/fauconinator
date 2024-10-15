@@ -7,7 +7,17 @@
     <link href="./output.css" rel="stylesheet">
 
     <script>
-        const email = "jeanpierre.faucon@rt-iut.re";
+        const email = [
+            "jeanpierre.faucon@rt-iut.re",
+            "lcks@rt-iut.re",
+            "dave.jones@univ-reunion.fr",
+            "bruno.guegan@rt-iut.re",
+            "kevin.arnassalom@rt-iut.re",
+            "k.arnassalom@rt-iut.re",
+            "m.pignolet@rt-iut.re",
+            "johanne.morel@rt-iut.re",
+            "johanne.morel@univ-reunion.fr"
+        ];
         function dostuff() {
             const salle = document.getElementById("salle").value;
             const subject = `Demande d'accès à la salle ${salle} pour travail collaboratif`;
@@ -22,7 +32,8 @@ Pourriez-vous nous indiquer si cela serait possible et, le cas échéant, les d�
 Je vous remercie d'avance pour votre attention et votre soutien.
 
 Cordialement,`;
-            const value = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(text)}`;
+
+            const value = `mailto:?bcc=${email.join(',')}subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(text)}`;
 
             document.getElementById("link").setAttribute("href", value);
         }
@@ -30,12 +41,11 @@ Cordialement,`;
 </head>
 
 <body class="flex items-center dark bg-black justify-center h-screen w-screen">
-    <form class="max-w-96 min-w-80 bg-center" >
+    <form class="max-w-96 min-w-80 bg-center">
         <form class="max-w-sm mx-auto">
             <label for="salle" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Salle à
                 réserver</label>
-            <select id="salle"
-            onchange="dostuff()"
+            <select id="salle" onchange="dostuff()"
                 class="my-5 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                 <option selected>Salle</option>
                 <option>RT-CABL-RES</option>
