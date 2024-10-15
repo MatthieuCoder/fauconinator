@@ -33,7 +33,7 @@ Je vous remercie d'avance pour votre attention et votre soutien.
 
 Cordialement,`;
 
-            const value = `mailto:?bcc=${email.join(',')}subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(text)}`;
+            const value = `mailto:?bcc=${email.join(',')}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(text)}`;
 
             document.getElementById("link").setAttribute("href", value);
         }
